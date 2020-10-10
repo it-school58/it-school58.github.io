@@ -1,5 +1,5 @@
-     
-$('.courses-theme-html').html(
+
+const themeHtmlStr =
 `01 Введение (домен, хостинг, браузеры, редакторы кода)
 02 Структура HTML файла
 03 Задание цвета в CSS 
@@ -39,9 +39,9 @@ $('.courses-theme-html').html(
 37 Хостинг проектов GitHub
 38 Вёрстка по БЭМ
 39 Использование фреймворка Bootstrap
-40 Концепция Pixel Perfect`);
+40 Концепция Pixel Perfect`;
 
-$('.courses-theme-js').html(
+const themeJsStr =
 `01 Стандарт ECMAScript
 02 Подключение файлов JavaScript
 03 Типы данных. Переменные и константы
@@ -68,4 +68,10 @@ $('.courses-theme-js').html(
 24 Обработка исключений
 25 Запросы к серверу
 26 Рисование на Canvas
-27 Отладка в браузере Chrome`);
+27 Отладка в браузере Chrome`;
+
+const themeHtml = document.getElementById('courses__theme_html');
+const themeJs = document.getElementById('courses__theme_js');
+
+themeHtml.innerHTML = themeHtmlStr;
+themeJs.innerHTML = themeJsStr;
