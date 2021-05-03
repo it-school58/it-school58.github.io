@@ -1,6 +1,6 @@
 
 const themeHtmlStr =
-`01 Введение (домен, хостинг, браузеры, редакторы кода)
+    `01 Введение (домен, хостинг, браузеры, редакторы кода)
 02 Структура HTML файла
 03 Задание цвета в CSS 
 04 Прозрачность элементов в CSS
@@ -42,7 +42,7 @@ const themeHtmlStr =
 40 Концепция Pixel Perfect`;
 
 const themeJsStr =
-`01 Стандарт ECMAScript
+    `01 Стандарт ECMAScript
 02 Подключение файлов JavaScript
 03 Типы данных. Переменные и константы
 04 Вывод сообщения пользователю
@@ -70,8 +70,26 @@ const themeJsStr =
 26 Рисование на Canvas
 27 Отладка в браузере Chrome`;
 
-const themeHtml = document.getElementById('courses__theme_html');
-const themeJs = document.getElementById('courses__theme_js');
+document.addEventListener('DOMContentLoaded', function () {
+    const themeHtml = document.getElementById('courses__theme_html');
+    const themeJs = document.getElementById('courses__theme_js');
 
-themeHtml.innerHTML = themeHtmlStr;
-themeJs.innerHTML = themeJsStr;
+    themeHtml.innerHTML = themeHtmlStr;
+    themeJs.innerHTML = themeJsStr;
+
+    new Swiper('.courses__photo', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        preloadImages: false,
+        lazy: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            900: {
+                slidesPerView: 2
+            }
+        }
+    });
+});
