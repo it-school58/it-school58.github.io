@@ -92,20 +92,42 @@ h3 {
 }
 
 .courses__photo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    height: 350px;
 }
 .courses__photo_img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: .25rem;
-	box-shadow:
-		0 12px 28px 0 rgba(0, 0, 0, 0.2),
-		0 2px 4px 0 rgba(0, 0, 0, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f8f9fa;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.4rem;
+    color: #8c6ad2;
+}
+
+@media screen and (max-width: 900px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 1rem;
+    }
 }
 
 .courses__projects {
