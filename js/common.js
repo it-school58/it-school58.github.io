@@ -1,4 +1,3 @@
-
 const themeHtmlStr =
 `01 Введение (домен, хостинг, браузеры, редакторы кода)
 02 Структура HTML файла
@@ -70,8 +69,26 @@ const themeJsStr =
 26 Рисование на Canvas
 27 Отладка в браузере Chrome`;
 
-const themeHtml = document.getElementById('courses__theme_html');
-const themeJs = document.getElementById('courses__theme_js');
+document.addEventListener('DOMContentLoaded', function () {
+    const themeHtml = document.getElementById('courses__theme_html');
+    const themeJs = document.getElementById('courses__theme_js');
 
-themeHtml.innerHTML = themeHtmlStr;
-themeJs.innerHTML = themeJsStr;
+    themeHtml.innerHTML = themeHtmlStr;
+    themeJs.innerHTML = themeJsStr;
+
+    new Swiper('.courses__photo', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        preloadImages: false,
+        lazy: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            900: {
+                slidesPerView: 2
+            }
+        }
+    });
+});
