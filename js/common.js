@@ -70,8 +70,8 @@ const themeJsStr =
 27 Отладка в браузере Chrome`;
 
 document.addEventListener('DOMContentLoaded', function () {
-    const themeHtml = document.getElementById('courses__theme_html');
-    const themeJs = document.getElementById('courses__theme_js');
+    const themeHtml = document.getElementById('courses__theme-html');
+    const themeJs = document.getElementById('courses__theme-js');
 
     themeHtml.innerHTML = themeHtmlStr;
     themeJs.innerHTML = themeJsStr;
@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 1,
         spaceBetween: 30,
         preloadImages: false,
+        autoplay: true,
+        loop: true,
         lazy: true,
         navigation: {
             nextEl: '.swiper-button-next',
