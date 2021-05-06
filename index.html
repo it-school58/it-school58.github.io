@@ -10,150 +10,89 @@
 </head>
 <body>
 
-	<h1>Школа веб-разработки</h1>
-	<div class="courses">
+	<main id="app">
+		<h1>Школа веб-разработки</h1>
+		<div class="courses">
 
-		<h2>⚡️ Курсы</h2>
+			<h2>⚡️ Курсы</h2>
 
-		<div class="courses__item courses__item-html">
-			<h3>Курс HTML и CSS</h3>
-			<ul class="courses__list">
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://it-school58.github.io/webcourses/themes/html/" target="_blank">Методичка по модулю HTML5 и CSS3</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://it-school58.github.io/webcourses-homework/" target="_blank">Домашнее задание</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://www.youtube.com/playlist?list=PL7cTIfGFrdKkmf-c43pmhzH3otzUCl8f3" target="_blank">Видеокурс HTML5 и CSS3</a>
-				</li>
-			</ul>
+			<div class="courses__item courses__item-html">
+				<h3>Курс HTML и CSS</h3>
+				<ul class="courses__list">
+					<li class="courses__list-item" v-for="item in coursehtmlCss">
+						<a class="icon-clone" :href="item.link" v-html="item.label" target="_blank"></a>
+					</li>
+				</ul>
 
-			<p><b>Продолжительность:</b> 2,5 месяца (занятия по 2 часа 2 раза в неделю)</p>
-			<p><b>Задача:</b> подготовка верстальщика, владеющего современными технологиями</p>
-			<p><b>Выпускной проект:</b> одностраничный сайт с адаптивной версткой</p>
+				<p><b>Продолжительность:</b> 2,5 месяца (занятия по 2 часа 2 раза в неделю)</p>
+				<p><b>Задача:</b> подготовка верстальщика, владеющего современными технологиями</p>
+				<p><b>Выпускной проект:</b> одностраничный сайт с адаптивной версткой</p>
 
-			<details>
-				<p><summary><b>Темы курса:</b></summary></p>
-				<pre class="courses__theme" id="courses__theme-html"></pre>
-			</details>
-		</div>
-
-		<div class="courses__item courses__item-js">
-			<h3>Курс JavaScript</h3>
-			<ul class="courses__list">
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://it-school58.github.io/webcourses/themes/js/" target="_blank">Методичка по модулю JavaScript</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://it-school58.github.io/webcourses-homework/" target="_blank">Домашнее задание</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://www.youtube.com/playlist?list=PL7cTIfGFrdKn9lnGXEUWEXYdYp-HKGPAw" target="_blank">Видеокурс JavaScript-практика (простой проект)</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://www.youtube.com/playlist?list=PL7cTIfGFrdKmKK4xAJsE31n3SACY0bi9t" target="_blank">Видеокурс JavaScript-практика (модульное приложение)</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://www.youtube.com/playlist?list=PL7cTIfGFrdKkQAWKDu2NdFt5Cx38B-A3i" target="_blank">Видеокурс React / Redux-практика</a>
-				</li>
-			</ul>
-
-			<p><b>Продолжительность:</b> 2,5 месяца (занятия по 2 часа 2 раза в неделю)</p>
-			<p><b>Задача:</b> подготовка frontend-разработчика начального уровня</p>
-			<p><b>Выпускной проект:</b> витрина с каталогом товаром</p>
-
-			<details>
-				<p><summary><b>Темы курса:</b></summary></p>
-				<pre class="courses__theme" id="courses__theme-js"></pre>
-			</details>
-		</div>
-
-		<h2>⚡️ Ресурсы</h2>
-
-		<div class="courses__item courses__item-links">
-			<h3>Сторонние ресурсы</h3>
-			<ul class="courses__list">
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://webref.ru/" target="_blank">WebReference</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://learn.javascript.ru/" target="_blank">Современный учебник Javascript</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://developer.mozilla.org/ru/" target="_blank">MDN</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://www.w3schools.com/" target="_blank">w3schools</a>
-				</li>
-				<li class="courses__list-item">
-					<a class="icon-clone" href="https://dev-pandaren.github.io/" target="_blank">Образовательный портал "Dev Pandaren"</a>
-				</li>
-			</ul>
-		</div>
-
-		<h2>⚡️ Live</h2>
-
-		<div class="swiper-container courses__photo">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/01.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/02.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/03.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/04.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/05.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/06.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/07.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/08.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
-				<div class="swiper-slide">
-					<img class="courses__photo-img swiper-lazy" data-src="img/courses/09.jpg">
-					<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-				</div>
+				<details>
+					<summary><b>Темы курса:</b></summary>
+					<div class="courses__theme">
+						<div v-for="item in themeHtmlCss" v-html="item"></div>
+					</div>
+				</details>
 			</div>
-			<button class="swiper-button-prev"></button>
-			<button class="swiper-button-next"></button>
+
+			<div class="courses__item courses__item-js">
+				<h3>Курс JavaScript</h3>
+				<ul class="courses__list">
+					<li class="courses__list-item" v-for="item in courseJs">
+						<a class="icon-clone" :href="item.link" v-html="item.label" target="_blank"></a>
+					</li>
+				</ul>
+
+				<p><b>Продолжительность:</b> 2,5 месяца (занятия по 2 часа 2 раза в неделю)</p>
+				<p><b>Задача:</b> подготовка frontend-разработчика начального уровня</p>
+				<p><b>Выпускной проект:</b> витрина с каталогом товаром</p>
+
+				<details>
+					<summary><b>Темы курса:</b></summary>
+					<div class="courses__theme">
+						<div v-for="item in themeJsStr" v-html="item"></div>
+					</div>
+				</details>
+			</div>
+
+			<h2>⚡️ Ресурсы</h2>
+
+			<div class="courses__item courses__item-links">
+				<h3>Сторонние ресурсы</h3>
+				<ul class="courses__list">
+					<li class="courses__list-item" v-for="item in courseLinks">
+						<a class="icon-clone" :href="item.link" v-html="item.label" target="_blank"></a>
+					</li>
+				</ul>
+			</div>
+
+			<h2>⚡️ Live</h2>
+
+			<div class="swiper-container courses__photo">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="url in coursePhotos">
+						<img class="courses__photo-img swiper-lazy" :data-src="url">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+					</div>
+				</div>
+				<button class="swiper-button-prev"></button>
+				<button class="swiper-button-next"></button>
+			</div>
+
+			<h2>⚡️ Проекты студентов</h2>
+
+			<div class="courses__projects">
+				<a v-for="project in courseProjects" :href="project.link" target="_blank">
+					<img class="courses__projects-img" :src="project.img">
+				</a>
+			</div>
 		</div>
+	</main>
 
-		<h2>⚡️ Проекты студентов</h2>
-
-		<div class="courses__projects">
-			<a href="https://it-school58.github.io/webcourses-projects/2019-template/" target="_blank"><img class="courses__projects-img" src="img/projects/2019-template.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2018-hand-made/" target="_blank"><img class="courses__projects-img" src="img/projects/2018-hand-made.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2019-phone/" target="_blank"><img class="courses__projects-img" src="img/projects/2019-phone.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2019-lend/" target="_blank"><img class="courses__projects-img" src="img/projects/2019-lend.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2019-nails/" target="_blank"><img class="courses__projects-img" src="img/projects/2019-nails.png"></a>
-
-			<a href="https://it-school58.github.io/webcourses-projects/2018-logoped/" target="_blank"><img class="courses__projects-img" src="img/projects/2018-logoped.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2018-pnz-service/" target="_blank"><img class="courses__projects-img" src="img/projects/2018-pnz-service.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2019-game/" target="_blank"><img class="courses__projects-img" src="img/projects/2019-game.png"></a>
-			<a href="https://it-school58.github.io/webcourses-projects/2018-flat/" target="_blank"><img class="courses__projects-img" src="img/projects/2018-flat.png"></a>
-		</div>
-	</div>
-
+	<script src="libs/vue/vue.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
